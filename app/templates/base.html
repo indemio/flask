@@ -8,11 +8,12 @@
     </head>
     <body>
         <div>
-            Microblog:
+            Микроблог:
             <a href="{{ url_for('index') }}">Домой</a>
             {% if current_user.is_anonymous %}
             <a href="{{ url_for('login') }}">Авторизация</a>
             {% else %}
+            <a href="{{ url_for('user', username=current_user.username) }}">Профиль</a>
             <a href="{{ url_for('logout') }}">Выход</a>
             {% endif %}
         </div>
