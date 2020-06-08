@@ -14,6 +14,7 @@
             <a href="{{ url_for('login') }}">Авторизация</a>
             {% else %}
             <a href="{{ url_for('user', username=current_user.username) }}">Профиль</a>
+            <a href="{{ url_for('explore') }}">Подробнее</a>
             <a href="{{ url_for('logout') }}">Выход</a>
             {% endif %}
         </div>
